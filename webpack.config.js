@@ -22,7 +22,7 @@ const cssLoaders = (extra) => {
       loader: MiniCssExtractPlugin.loader,
       options: {
         hmr: isDev,
-        reloadAll: true,
+        reloadAll: isDev,
       },
     },
     "css-loader",
@@ -85,7 +85,11 @@ const jsLoaders = () => {
 const PATHS = {
   src: path.join(__dirname, "./src"),
   dist: path.join(__dirname, "./dist"),
-  assets: "assets/",
+  // Assets shortcuts:
+  scss: path.join(__dirname, "./src/assets/scss"),
+  js: path.join(__dirname, "./src/assets/js"),
+  fonts: path.join(__dirname, "./src/assets/fonts"),
+  img: path.join(__dirname, "./src/assets/img"),
 };
 
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
@@ -100,7 +104,7 @@ module.exports = {
   mode: "development",
   // Configure entry points of app
   entry: {
-    main: ["@babel/polyfill", `${PAGES_DIR}/index.pug`],
+    main: ["@babel/polyfill", `${PATHS.js}/index.js`, `${PAGES_DIR}/index.pug`],
   },
   // Configure output dir
   output: {
@@ -113,7 +117,10 @@ module.exports = {
 
     // Configure aliases to app parts
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      "@": path.resolve(__dirname, "./src"),
+      "@scss": path.resolve(__dirname, "./src/assets/scss"),
+      "@img": path.resolve(__dirname, "./src/assets/img"),
+      "@fonts": path.resolve(__dirname, "./src/assets/fonts"),
     },
   },
   // Optimization production build
@@ -132,19 +139,23 @@ module.exports = {
       (page) =>
         new HTMLWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `${page.replace(/\.pug/, '.html')}`
+          filename: `${page.replace(/\.pug/, ".html")}`,
         })
     ),
     new CleanWebpackPlugin(),
     // Copy static files to dist
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, "src/favicon.ico"),
-    //       to: path.resolve(__dirname, "dist"),
-    //     },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "./src/assets/scss/main.scss"),
+          to: path.resolve(__dirname, "./dist/static/main.scss"),
+        },
+        // {
+        //   from: path.resolve(__dirname, "./src/assets/scss/main.css.map"),
+        //   to: path.resolve(__dirname, "./dist/static/main.css.map"),
+        // },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: filename("css"),
     }),
@@ -180,8 +191,8 @@ module.exports = {
       // Pug templates
       {
         test: /\.pug$/,
-        use: ['pug-loader']
-      }
+        use: ["pug-loader"],
+      },
     ],
   },
 };

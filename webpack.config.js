@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -25,7 +26,7 @@ const cssLoaders = (extra) => {
       },
     },
     "css-loader",
-    "postcss-loader"
+    "postcss-loader",
   ];
 
   if (extra) {
@@ -50,7 +51,6 @@ const optimization = () => {
   }
   return config;
 };
-
 
 // Customize babels presets
 const babelOptions = (preset) => {
@@ -82,6 +82,16 @@ const jsLoaders = () => {
   return loaders;
 };
 
+const PATHS = {
+  src: path.join(__dirname, "./src"),
+  dist: path.join(__dirname, "./dist"),
+  assets: "assets/",
+};
+
+const PAGES_DIR = `${PATHS.src}/pug/pages`;
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter((filename) => filename.endsWith(".pug"));
 
 module.exports = {
   // Set context dir of app
@@ -90,8 +100,7 @@ module.exports = {
   mode: "development",
   // Configure entry points of app
   entry: {
-    main: ["@babel/polyfill", "./index.jsx"],
-    analytics: "./analytics.ts",
+    main: ["@babel/polyfill", `${PAGES_DIR}/index.pug`],
   },
   // Configure output dir
   output: {
@@ -118,22 +127,24 @@ module.exports = {
   devtool: isDev ? "source-map" : "",
   // Configure plugins
   plugins: [
-    new HTMLWebpackPlugin({
-      template: "./index.html",
-      minify: {
-        // minimize in prod
-        collapseWhitespace: isProd,
-      },
-    }),
+    // Create html pages from pug
+    ...PAGES.map(
+      (page) =>
+        new HTMLWebpackPlugin({
+          template: `${PAGES_DIR}/${page}`,
+          filename: `${page.replace(/\.pug/, '.html')}`
+        })
+    ),
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src/favicon.ico"),
-          to: path.resolve(__dirname, "dist"),
-        },
-      ],
-    }),
+    // Copy static files to dist
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, "src/favicon.ico"),
+    //       to: path.resolve(__dirname, "dist"),
+    //     },
+    //   ],
+    // }),
     new MiniCssExtractPlugin({
       filename: filename("css"),
     }),
@@ -166,6 +177,11 @@ module.exports = {
         exclude: /node_modules/,
         use: jsLoaders(),
       },
+      // Pug templates
+      {
+        test: /\.pug$/,
+        use: ['pug-loader']
+      }
     ],
   },
 };

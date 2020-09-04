@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e58bee05-3cb5-4b5a-9029-8f2edbb4ee9d" name="Default Changelist" comment="" />
+    <list default="true" id="e58bee05-3cb5-4b5a-9029-8f2edbb4ee9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +17,6 @@
       <list>
         <option value="HTML File" />
         <option value="Pug File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -44,7 +48,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\smoro\Documents\Проекты\programming\templates\frontend\webpack-template\node_modules\prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -78,7 +82,7 @@
       <updated>1599150677181</updated>
       <workItem from="1599150678652" duration="5037000" />
       <workItem from="1599155756658" duration="2629000" />
-      <workItem from="1599158418036" duration="7601000" />
+      <workItem from="1599158418036" duration="308000" />
     </task>
     <servers />
   </component>
@@ -86,10 +90,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="821" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599169772271">
+    <state x="821" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599157530745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="821" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599169772271" />
+    <state x="821" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599157530745" />
     <state x="687" y="152" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1599154475448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -98,38 +102,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="308" width="507" height="617" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599154602871" />
-    <state x="551" y="241" key="EditFileWatcherDialog" timestamp="1599165000825">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="551" y="241" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599165000825" />
     <state x="686" y="214" key="FileChooserDialogImpl" timestamp="1599154903166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="686" y="214" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599154903166" />
-    <state width="930" height="261" key="GridCell.Tab.0.bottom" timestamp="1599169454227">
+    <state width="930" height="264" key="GridCell.Tab.0.bottom" timestamp="1599158387450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599169454227" />
-    <state width="930" height="261" key="GridCell.Tab.0.center" timestamp="1599169454227">
+    <state width="930" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
+    <state width="930" height="264" key="GridCell.Tab.0.center" timestamp="1599158387450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599169454227" />
-    <state width="930" height="261" key="GridCell.Tab.0.left" timestamp="1599169454227">
+    <state width="930" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
+    <state width="930" height="264" key="GridCell.Tab.0.left" timestamp="1599158387450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599169454227" />
-    <state width="930" height="261" key="GridCell.Tab.0.right" timestamp="1599169454227">
+    <state width="930" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
+    <state width="930" height="264" key="GridCell.Tab.0.right" timestamp="1599158387450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599169454227" />
-    <state x="336" y="77" key="SettingsEditor" timestamp="1599169779832">
+    <state width="930" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
+    <state x="336" y="77" key="SettingsEditor" timestamp="1599154914417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="336" y="77" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599169779832" />
-    <state x="701" y="344" key="scopes" timestamp="1599164997287">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="701" y="344" key="scopes/0.0.1920.1040@0.0.1920.1040" timestamp="1599164997287" />
+    <state x="336" y="77" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599154914417" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1599154685884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

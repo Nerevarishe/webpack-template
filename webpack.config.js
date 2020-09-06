@@ -2,11 +2,10 @@ const path = require("path");
 const fs = require("fs");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 // Check environment state: dev or prod
 const isDev = process.env.NODE_ENV === "development";
@@ -127,11 +126,12 @@ module.exports = {
   optimization: optimization(),
   // Configure dev server
   devServer: {
+    host: "0.0.0.0",
     port: 3000,
     hot: isDev,
   },
   // Generate source-maps in dev mode
-  devtool: isDev ? "source-map" : "",
+  devtool: isDev ? "source-map" : false,
   // Configure plugins
   plugins: [
     // Create html pages from pug
@@ -144,18 +144,14 @@ module.exports = {
     ),
     new CleanWebpackPlugin(),
     // Copy static files to dist
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "./src/assets/scss/main.scss"),
-          to: path.resolve(__dirname, "./dist/static/main.scss"),
-        },
+    // new CopyWebpackPlugin({
+    //   patterns: [
         // {
-        //   from: path.resolve(__dirname, "./src/assets/scss/main.css.map"),
-        //   to: path.resolve(__dirname, "./dist/static/main.css.map"),
-        // },
-      ],
-    }),
+        //   from: path.resolve(__dirname, ""),
+        //   to: path.resolve(__dirname, ""),
+        // }
+      // ],
+    // }),
     new MiniCssExtractPlugin({
       filename: filename("css"),
     }),

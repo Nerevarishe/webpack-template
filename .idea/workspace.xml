@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e58bee05-3cb5-4b5a-9029-8f2edbb4ee9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +49,12 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\smoro\Documents\Проекты\programming\templates\frontend\webpack-template\src\assets\scss" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\smoro\Documents\Проекты\programming\templates\frontend\webpack-template\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\smoro\Documents\Проекты\programming\templates\frontend\webpack-template" />
+      <recent name="C:\Users\smoro\Documents\Проекты\programming\templates\frontend\webpack-template\src\assets\scss" />
     </key>
   </component>
   <component name="RunManager">
@@ -106,22 +105,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="686" y="214" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599154903166" />
-    <state width="930" height="264" key="GridCell.Tab.0.bottom" timestamp="1599158387450">
+    <state width="930" height="261" key="GridCell.Tab.0.bottom" timestamp="1599375109596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
-    <state width="930" height="264" key="GridCell.Tab.0.center" timestamp="1599158387450">
+    <state width="930" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599375109596" />
+    <state width="930" height="261" key="GridCell.Tab.0.center" timestamp="1599375109595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
-    <state width="930" height="264" key="GridCell.Tab.0.left" timestamp="1599158387450">
+    <state width="930" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599375109595" />
+    <state width="930" height="261" key="GridCell.Tab.0.left" timestamp="1599375109595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
-    <state width="930" height="264" key="GridCell.Tab.0.right" timestamp="1599158387450">
+    <state width="930" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599375109595" />
+    <state width="930" height="261" key="GridCell.Tab.0.right" timestamp="1599375109595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="930" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599158387450" />
+    <state width="930" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599375109595" />
     <state x="336" y="77" key="SettingsEditor" timestamp="1599154914417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
